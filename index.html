@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDO</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: 1s;
+        }
+
+        body{
+            background-color: rgb(20, 20, 20);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logoOP{
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100px;
+        }
+
+        .card{
+            perspective: 1000px;
+        }
+
+        .cardCarente{
+            margin-top:100px;
+            background-color: blueviolet;
+            background-image: url(Carente.png);
+            background-size:cover;
+            background-repeat: no-repeat;
+            width: 400px;
+            height: 572px;
+            border-radius: 50px;
+            box-shadow: 0px 10px 10px black;
+        }
+
+        .cardCarente-monstro{
+            position: absolute;
+            height: 600px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 150px;
+            opacity: 0%;
+        }
+
+        .logoCal{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            bottom: -140px;
+            opacity: 0%;
+        }
+
+        .card:hover .cardCarente{
+            transform: rotateX(40deg) translateY(50px);
+            opacity: 40%;
+            transition: 1s;
+            box-shadow: 0px 30px 10px black;
+        }
+
+        .card:hover .cardCarente-monstro{
+            position: absolute;
+            height: 600px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 100%;
+            top: 30px;
+            transition-delay: 0.2s;
+        }
+
+        .card:hover .logoCal{
+            opacity: 100%;
+            transition-delay: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="logoOP" src="op-logo.png" alt="">
+    <div class="card" id="cardCarente">
+        <div class="cardCarente"></div>
+        <img class="logoCal" src="Logo ordem.png" alt=""> 
+        <img class="cardCarente-monstro" src="Miniatura_Carente_em_Calamidade.webp" alt=""> 
+    </div>
+</body>
+</html>
